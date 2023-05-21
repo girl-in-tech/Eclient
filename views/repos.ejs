@@ -1,0 +1,32 @@
+<%- include('header.ejs') %>
+<table>
+    <tr>
+       <th>From</th><th>Subject</th><th>Date</th><th>NbrAttachments</th>
+    </tr>
+ 
+    <% results.forEach(function(repo) { %>
+        
+            <tr>
+                <td><%= repo.from %></td>
+                <td><%= repo.subject%></td>
+                <td><%= repo.date %></td>
+                <td><%= repo.aLen %></td>
+                <td>
+                    <div class="login-form">
+                        <form  action="/download" method="post">
+                            <div class="form-control">
+                                <!-- <input type="button" onclick="onClick('<%= repo.seqno  %>')" value='<%= repo.seqno  %>' /></td>  -->
+                                <button type="submit" id='seq' name="seq" value='<%= repo.seqno  %>'   class="btn">Descarca</button>
+                                <!-- <input
+                                  type="email"
+                                  name="email"
+                                  id="email"
+                                  placeholder="Enter destinatar email"
+                                /> -->
+                       </form>
+                    </div>
+              </tr>   
+      
+        <% })%>
+ </table>
+<%- include('footer.ejs') %>

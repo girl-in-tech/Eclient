@@ -1,0 +1,47 @@
+<div class="login-form">
+    <form  action="/sendEmail" method="post">
+        <div class="form-control">
+            <label for="email">To:</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter destinatar email"
+            />
+          </div>
+          <div class="form-control">
+            <label for="replayto">Replay-to:</label>
+            <input
+              type="text"
+              name="replayto"
+              id="replayto"
+              placeholder="Enter Replay-to"
+            />
+          </div>
+      <div class="form-control">
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          name="subject"
+          id="subject"
+          placeholder="Enter your subject"
+        />
+      </div>
+     
+      <div class="form-control">
+        <label for="text">Text:</label>
+        <input
+          type="text"
+          name="text"
+          id="text"
+          placeholder="Enter text"
+        />
+      </div>
+
+      <label for="file">Select a file:</label>
+        <input type="file" id="file" name="file">
+      <div class="form-control">
+        <button type="submit" class="btn">Send</button>
+      </div>
+    </form>
+  </div>
